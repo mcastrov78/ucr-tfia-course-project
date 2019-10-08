@@ -22,18 +22,12 @@ public class ChiefChef implements Chef {
     public void update(Order order) {
         System.out.println("\nNEW Order received");
         Sandwich sandwich = createSandwich(order.getSandwichType());
-
         sandwich = addTopping(sandwich, order.getToppingType());
         sandwich.prepare();
         sandwich.heat();
         sandwich.cut();
         sandwich.box();
-
-        System.out.println("ORDER COMPLETE: " + sandwich.getDescription());
-        System.out.println("ORDER COST: " + sandwich.getCost());
-
-        SalesLog salesLog = SalesLog.getInstance();
-        salesLog.logSale(sandwich.getDescription(), sandwich.getCost());
+        closeOrder(sandwich);
     }
 
     private Sandwich createSandwich(SandwichType sandwichType) {
@@ -69,5 +63,12 @@ public class ChiefChef implements Chef {
         }
 
         return decoratedSandwich;
+    }
+
+    private void closeOrder(Sandwich sandwich) {
+        SalesLog salesLog = SalesLog.getInstance();
+        salesLog.logSale(sandwich.getDescription(), sandwich.getCost());
+        System.out.println("ORDER COMPLETE: " + sandwich.getDescription());
+        System.out.println("ORDER COST: " + sandwich.getCost());
     }
 }
