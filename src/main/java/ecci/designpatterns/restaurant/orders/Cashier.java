@@ -1,11 +1,14 @@
-package ecci.designpatterns.foodcourt.orders;
-
-import ecci.designpatterns.foodcourt.Order;
+package ecci.designpatterns.restaurant.orders;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents the restaurant cashier that gets orders and dispatch them to be served.
+ * (Subject or publisher part of the Observer pattern)
+ */
 public class Cashier implements NewOrdersProcessor {
+
     private List<Chef> chefs;
     private Order currentOrder;
 

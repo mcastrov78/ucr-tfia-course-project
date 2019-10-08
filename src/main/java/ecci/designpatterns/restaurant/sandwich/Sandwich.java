@@ -1,10 +1,18 @@
-package ecci.designpatterns.foodcourt.sandwich;
+package ecci.designpatterns.restaurant.sandwich;
 
+import ecci.designpatterns.restaurant.sandwich.ingredient.Bread;
+import ecci.designpatterns.restaurant.sandwich.ingredient.Meat;
+import ecci.designpatterns.restaurant.sandwich.ingredient.Vegetable;
+
+/**
+ * Represents a base sandwich with a name, bread and meat.
+ */
 public abstract class Sandwich {
 
-    String name;
-    Bread bread;
-    Meat meat;
+    protected String name;
+    protected Bread bread;
+    protected Meat meat;
+    protected Vegetable[] vegetables;
 
     public String getName() {
         return name;
@@ -30,7 +38,17 @@ public abstract class Sandwich {
         this.meat = meat;
     }
 
+    public Vegetable[] getVegetables() {
+        return vegetables;
+    }
+
+    public void setVegetables(Vegetable vegetable[]) {
+        this.vegetables = vegetables;
+    }
+
     abstract public void prepare();
+
+    abstract public double getCost();
 
     public void heat() {
         System.out.println("Heat for 2 minutes ...");
@@ -44,7 +62,7 @@ public abstract class Sandwich {
         System.out.println("Place sandwich in box ...");
     }
 
-    public String toString() {
+    public String getDescription() {
         StringBuffer result = new StringBuffer();
         result.append(name + ": ");
 
@@ -55,6 +73,12 @@ public abstract class Sandwich {
         if (meat != null) {
             result.append(meat);
             result.append(" - ");
+        }
+        if (vegetables != null) {
+            for (int i = 0; i < vegetables.length; i++) {
+                result.append(vegetables[i]);
+                result.append(" - ");
+            }
         }
 
         return result.toString();

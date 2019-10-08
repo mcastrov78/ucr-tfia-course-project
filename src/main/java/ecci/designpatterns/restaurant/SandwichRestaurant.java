@@ -1,12 +1,13 @@
-package ecci.designpatterns.foodcourt;
+package ecci.designpatterns.restaurant;
 
-import ecci.designpatterns.foodcourt.orders.Cashier;
-import ecci.designpatterns.foodcourt.orders.ChiefChef;
+import ecci.designpatterns.restaurant.orders.Cashier;
+import ecci.designpatterns.restaurant.orders.ChiefChef;
+import ecci.designpatterns.restaurant.orders.OrderGenerator;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FoodCourt {
+public class SandwichRestaurant {
 
     public static final void main(String args[]) {
         Timer timer = new Timer();
