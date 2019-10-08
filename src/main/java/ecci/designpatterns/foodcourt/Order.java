@@ -1,13 +1,14 @@
 package ecci.designpatterns.foodcourt;
 
 public class Order {
-    private int restaurantId;
+    private int sandwichType;
 
-    public int getRestaurantId() {
-        return restaurantId;
+    public int getSandwichType() {
+        return sandwichType;
     }
 
-    public void setRestaurantId(int restaurantId) {
-        this.restaurantId = restaurantId;
+    public void setSandwichType(int sandwichType) {
+        this.sandwichType = sandwichType;
     }
+
 }

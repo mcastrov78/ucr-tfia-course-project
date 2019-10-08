@@ -1,15 +1,15 @@
 package ecci.designpatterns.foodcourt;
 
-import ecci.designpatterns.foodcourt.restaurants.UnifiedCashier;
+import ecci.designpatterns.foodcourt.orders.Cashier;
 
 import java.util.TimerTask;
 import java.util.Random;
 
 public class OrderGenerator extends TimerTask {
 
-    UnifiedCashier unifiedCashier = null;
+    Cashier unifiedCashier = null;
 
-    public OrderGenerator(UnifiedCashier unifiedCashier) {
+    public OrderGenerator(Cashier unifiedCashier) {
         this.unifiedCashier = unifiedCashier;
     }
 
@@ -20,11 +20,11 @@ public class OrderGenerator extends TimerTask {
 
     public void generateOrder() {
         Random random = new Random();
-        int restaurantId = random.nextInt(3);
+        int sandwichType = random.nextInt(2);
         Order order = new Order();
+        order.setSandwichType(sandwichType);
 
-        System.out.println("Generated restaurantId: " + restaurantId);
-        order.setRestaurantId(restaurantId);
+        System.out.println("\nNEW ORDER CAME IN: " + sandwichType);
         unifiedCashier.setOrder(order);
     }
 }
