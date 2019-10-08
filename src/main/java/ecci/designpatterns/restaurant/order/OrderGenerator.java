@@ -1,4 +1,4 @@
-package ecci.designpatterns.restaurant.orders;
+package ecci.designpatterns.restaurant.order;
 
 import ecci.designpatterns.restaurant.sandwich.SandwichType;
 import ecci.designpatterns.restaurant.sandwich.topping.ToppingType;

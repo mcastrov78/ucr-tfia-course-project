@@ -1,4 +1,4 @@
-package ecci.designpatterns.restaurant.orders;
+package ecci.designpatterns.restaurant.order;
 
 import ecci.designpatterns.restaurant.saleslog.SalesLog;
 import ecci.designpatterns.restaurant.sandwich.*;

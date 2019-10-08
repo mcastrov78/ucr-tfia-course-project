@@ -1,8 +1,8 @@
 package ecci.designpatterns.restaurant;
 
-import ecci.designpatterns.restaurant.orders.Cashier;
-import ecci.designpatterns.restaurant.orders.ChiefChef;
-import ecci.designpatterns.restaurant.orders.OrderGenerator;
+import ecci.designpatterns.restaurant.order.Cashier;
+import ecci.designpatterns.restaurant.order.ChiefChef;
+import ecci.designpatterns.restaurant.order.OrderGenerator;
 
 import java.util.Timer;
 import java.util.TimerTask;

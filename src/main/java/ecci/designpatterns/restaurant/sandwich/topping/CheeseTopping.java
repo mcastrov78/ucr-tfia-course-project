@@ -21,6 +21,6 @@ public class CheeseTopping extends ToppingDecorator {
     }
 
     public double getCost() {
-        return sandwich.getCost() + .10;
+        return sandwich.getCost() + .75;
     }
 }

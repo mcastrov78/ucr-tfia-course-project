@@ -1,4 +1,4 @@
-package ecci.designpatterns.restaurant.orders;
+package ecci.designpatterns.restaurant.order;
 
 /**
  * Observer or subscriber part of the Observer pattern.

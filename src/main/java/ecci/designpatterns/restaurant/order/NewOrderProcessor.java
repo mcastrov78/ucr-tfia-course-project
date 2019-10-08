@@ -1,9 +1,9 @@
-package ecci.designpatterns.restaurant.orders;
+package ecci.designpatterns.restaurant.order;
 
 /**
  * Subject or publisher part of the Observer pattern.
  */
-public interface NewOrdersProcessor {
+public interface NewOrderProcessor {
 
     public void registerObserver(Chef chef);
     public void removeObserver(Chef chef);
